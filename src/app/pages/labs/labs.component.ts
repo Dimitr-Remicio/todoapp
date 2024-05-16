@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-labs',
@@ -10,10 +11,12 @@ import { CommonModule } from '@angular/common';
 })
 export class LabsComponent {
   title = 'Todo App';
-  tasks = [
+  tasks = signal([
     'Read Documentation',
     "Create a new project",
     "Start to Code",
     "Create all components",
-  ]
+  ]);
+  
+  
 }
